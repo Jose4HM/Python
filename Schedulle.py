@@ -32,18 +32,22 @@ def extract(data):
         csv=data[data.Signature==subjects[i]]
         csv.to_csv('E:/Archivos/Codes/Python/DataBase/horarios/CursosOnebyOne/subject{}.csv'.format(i+1),index=False)
     number=len(subjects)
-    readall(number)
+    sorter(data,number)
 
-def readall(n):
-    # for i in range(0,n):
-    #     df=(pd.read_csv('C:/Users/User/Desktop/Codes/DataBase/horarios/CursosOnebyOne/subject{}.csv'.format(i+1)))
-        # df = df.sort_values(by="Thursday")
-    #     print(df)  
+def sorter(df,n):
+    courses=df.Signature.unique()
+    groups=df.Group.unique()
+    c=courses[1] 
+    # print(courses)
+    # print(n)
+    for i in range(groups):
+        grupo[i]=df.loc[:, 'Group'] == groups[i]
+    # GA = df.loc[:, 'Group'] == 'A'
+        df_ga = df.loc[GA]
+    z=df_ga
+    print(z)
+    
 
-    df=(pd.read_csv('E:/Archivos/Codes/Python/DataBase/horarios/CursosOnebyOne/subject1.csv'))
-    print(df["Monday"].sum())
-    # print(df.sort_values(by="Thursday"))
-    # print(df.dtypes)
 if __name__=="__main__":
     clean()
 
