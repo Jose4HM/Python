@@ -7,4 +7,4 @@ s=abs(s)#"Rectificar los valores "
 plt.plot(x, s)#plotear con los valores de x y s
 plt.grid(True, which='both')#activar la grilla
 plt.title('Sin rectified Signal')#añadir titulo
-plt.show()#MOstrar el ploteo
+plt.show()#Mostrar el ploteo
